@@ -12,4 +12,12 @@
   60% {
     transform: translateY(-15px);
   }
-}S
+}
+.Backgroundscroll {
+  background-image: url('images/background.jepg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backgground-attachment: scroll;
+  padding: 100px;
+}
