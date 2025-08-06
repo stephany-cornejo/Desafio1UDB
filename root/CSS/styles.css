@@ -14,10 +14,14 @@
   }
 }
 .Backgroundscroll {
-  background-image: url('images/background.jepg');
-  background-size: cover;
+  background-image: url('https://cdn.wallpapersafari.com/85/37/SenDPw.jpg');
+  background-size: 100% auto;
+  background-position-y: top;
   background-repeat: no-repeat;
-  background-position: center;
-  backgground-attachment: scroll;
-  padding: 100px;
+  background-attachment: fixed;
+  aspect-ratio: 16/9;
+  padding-top: 120px;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center; 
 }
