@@ -25,3 +25,52 @@
   padding-right: 0;
   align-items: center; 
 }
+.Bgimage {
+
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/9;
+  padding-top: 120px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 80px;
+  align-items: center; 
+}
+@media screen and (min-width:567px){
+.cwrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card{
+  width: calc(100%/3);
+}
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #000 !important;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000 !important;
+  border-radius: 50%;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width:567px){
+  .card:not(:first-child){
+    display:none
+  }
+  .card:first-child {
+    width: 80%;
+    position: center;
+  }
+}
+.navbar {
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 1030;
+}
