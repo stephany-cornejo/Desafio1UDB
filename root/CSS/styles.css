@@ -205,7 +205,21 @@ margin-top: 2rem;
   top: 40%;
 }
 
-/* MEDIA QUERIES  */
+/* PAGINA - LEGAL */
+
+section h1 {
+  margin: 5rem 0 2rem 0;
+}
+section p {
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  color: var(--negro);
+}
+section span {
+  font-weight: 700;
+}
+
+/*----- MEDIA QUERIES  -----*/
 
 @media screen and (max-width:567px){
   .card:not(:first-child){
