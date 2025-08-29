@@ -205,6 +205,35 @@ margin-top: 2rem;
   top: 40%;
 }
 
+/* PAGINA - CENTRO DE AYUDA */
+
+.centro-ayuda {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.centro-ayuda img{
+  width: 100%;
+  height: auto;
+  transform: translate(0, -90px);
+}
+
+.centro-ayuda h1 {
+  position: absolute;
+  color: var(--morado-pastel);
+  z-index: 1;
+  top: 45%;
+  right: 5%;
+  font-weight: 700;
+}
+
+#contacto img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
 /* PAGINA - LEGAL */
 
 section h1 {
@@ -255,5 +284,11 @@ section span {
   }
   .card{
     width: calc(100%/3);
+  }
+
+  /* PAGINA - CENTRO DE AYUDA */
+  .centro-ayuda h1 {
+    top: 65%;
+    right: 5%;
   }
 }
