@@ -17,20 +17,81 @@
     <main>
         <div class="centro-ayuda">
             <h1>Centro de ayuda</h1>
-            <img src="images/centro-de-ayuda.jpg" alt="">
-            
+            <img src="images/centro-ayuda1.jpg" alt="">
         </div>
-        <section id="preguntas">
-            <h1>Preguntas Frecuentes</h1>
+        <section id="preguntas" class="container">
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <h1 class="title">Preguntas Frecuentes</h1>
+                    <p class="pregunta">¿Que es Astro y que productos tenemos?</p>
+                    <p class="respuesta">Astro es una fintech que ofrece un ecosistema de soluciones financieras digitales a comercios y usuarios para facilitar el procesamiento de pagos.</p>
+
+                    <p class="pregunta">¿Mi dinero está seguro con Astro?</p>
+                    <p class="respuesta">Tu dinero está seguro con nosotros. Estamos respaldados por Banco Agrícola en El Salvador y tenemos todos los procesos requeridos por la ley.</p>
+
+                    <p class="pregunta">¿Para que me sirven las tarjetas de Astro?</p>
+                    <p class="respuesta">Nuestra misión es ofrecer soluciones financieras digitales que empoderen a individuos y empresas, construyendo un futuro financiero más inclusivo y eficiente para toda la región</p>
+                    <p class="respuesta">Todo con el respaldo de entidades financieras autorizadas, la plataforma astro ofrece una experiencia financiera confiable, eficiente y segura en todas tus transacciones.</p>
+
+                    <p class="pregunta">¿En que puedo usar las tarjetas de Astro?</p>
+                    <p class="respuesta">Puedes usarla para cualquier compra en comercios físicos o en línea que acepte pagos con Tarjetas VISA, entre otros como:</p>
+                    <ul>
+                        <li>Enviando dinero a otras tarjetas Astro.</li>
+                        <li>Pagos de servicios y recargas de celular.</li>
+                        <li>Contratar seguros.</li>
+                        <li>Ganar Cashback en todas tus compras.</li>
+                        <li>Comprar tickets en Fun Capital.</li>
+                        <li>Pagar en todos los comercios Astro.</li>
+                    </ul>
+                    
+                    <p class="pregunta">¿Puedo cancelar en cualquier momento?</p>
+                    <p class="respuesta">Sí, puedes cancelar tus tarjetas en cualquier momento, sin recargos, penalizaciones o cobros extra.</p>
+
+                </div>
+            </div>
         </section>
         <section id="quejas">
-            <h1>Quejas y Sugerencias</h1>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-9">
+                        <h1 class="title">Quejas y Sugerencias</h1>
+                        <p class="quejas">Si tienes alguna queja o sugerencia que te gustaria hacernos llegar, no dudes en escribirnos.</p>
+                    
+                        <form action="">
+                            <div class="form-group">
+                                <label for="name">Nombre completo: *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico: *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto: *</label>
+                                <input type="text" id="asunto" name="asunto" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="mensaje">Mensaje: *</label>
+                            <textarea name="mensaje" id="mensaje" class="form-control"  required></textarea>
+                            </div>
+                            
+                            <button type="submit" id="enviar">ENVIAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contacto">
-            <div class="consultas">
 
+            <div class="contactanos">
+                <h2>¿Consultas?</h2>
+                <a href="#quejas">CONTACTANOS</a>
             </div>
-            <img src="images/contact1.jpg">
+            <img class="contacto-img" src="images/contact1.jpg">
+    
         </section>
     </main>
 
@@ -39,7 +100,7 @@
             <div class="f-about-us">
                 <h3>astro</h3>
                 <ul>
-                    <li><a href="">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#tarjetas">Tarjetas</a></li>
                     <li><a href="#solicitar-tarjeta">Solicitar tarjeta</a></li>
                 </ul>

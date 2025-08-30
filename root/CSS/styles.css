@@ -208,7 +208,6 @@ margin-top: 2rem;
 /* PAGINA - CENTRO DE AYUDA */
 
 .centro-ayuda {
-  max-height: 600px;
   overflow: hidden;
   position: relative;
 }
@@ -226,12 +225,104 @@ margin-top: 2rem;
   top: 45%;
   right: 5%;
   font-weight: 700;
+  font-size: 2.5em;
 }
 
 #contacto img {
   width: 100%;
   height: auto;
   border-radius: 20px;
+}
+
+#preguntas {
+  margin-top: -90px;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.title {
+  color: var(--morado-principal);
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#preguntas .pregunta {
+  color: var(--morado-oscuro);
+  font-weight: 600;
+}
+
+#quejas {
+  background-color: var(--morado-pastel);
+  padding-bottom: 3rem;
+}
+
+.quejas {
+  text-align: center;
+}
+
+#preguntas ul{
+  list-style-type:none;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+form label{
+  color: var(--morado-oscuro);
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+input[type="text"], input[type="email"] {
+  border: 1px solid var(--morado-oscuro);
+}
+
+#mensaje{
+  resize:none;
+  border: 1px solid var(--morado-oscuro);
+}
+
+form #enviar {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  background-color: var(--morado-principal);
+  color: var(--morado-pastel);
+  display: block;
+  margin: 2.5rem auto;
+}
+
+#contacto{
+  width: 65%;
+  margin: 15% auto;
+  position: relative;
+}
+.contactanos {
+  position: absolute;
+  background-color: var(--morado-pastel);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.contactanos h2 {
+  color: var(--morado-principal);
+  margin: 0 0 1rem 0;
+}
+
+.contactanos a {
+  text-decoration: none;
+  color: var(--morado-pastel);
+  background-color: var(--morado-principal);
+  padding: 0.3rem 0.5rem;
+  border-radius: 20px;
+}
+
+#contacto img {
+  width: 80%;
+  margin-left: auto;
 }
 
 /* PAGINA - LEGAL */
@@ -273,9 +364,17 @@ section span {
   .f-svg{
     display: none;
   }
+
+  /* PAGINA - CENTRO DE AYUDA */
+  .centro-ayuda h1 {
+    font-size: 1.5rem;
+    top: 25%;
+    right: 5%;  
+  }
+
 }
 
-@media screen and (min-width:567px){
+@media screen and (min-width:576px){
   .cwrapper{
     display: flex;
     justify-content: center;
@@ -288,7 +387,20 @@ section span {
 
   /* PAGINA - CENTRO DE AYUDA */
   .centro-ayuda h1 {
-    top: 65%;
+    top: 55%;
     right: 5%;
+    font-size: 3.7rem;
+  }
+
+  .contactanos {
+    padding: 2rem 2.3rem;
+  }
+
+  .contactanos h2{
+    font-size: 2.5em;
+  }
+
+  .contactanos a {
+    font-size: 150%;
   }
 }
