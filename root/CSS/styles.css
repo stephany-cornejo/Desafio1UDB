@@ -1,19 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
   --morado-principal: #A721F5;
   --morado-pastel: #F7EDFA;
   --morado-oscuro: #512871;
   --negro: #0A0908;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -26,29 +33,42 @@ body {
   font-style: normal;
 }
 
-img,svg{
+img,
+svg {
   display: block;
 }
 
-input, button, textarea,select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 .bounce:hover {
-  animation: bounce 1s; /* solo cuando ponga el mouse encima*/
+  animation: bounce 1s;
+  /* solo cuando ponga el mouse encima*/
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-30px);
   }
+
   60% {
     transform: translateY(-15px);
   }
 }
+
 .Backgroundscroll {
   background-image: url('https://cdn.wallpapersafari.com/85/37/SenDPw.jpg');
   background-size: 100% auto;
@@ -59,8 +79,9 @@ input, button, textarea,select {
   padding-top: 120px;
   padding-left: 0;
   padding-right: 0;
-  align-items: center; 
+  align-items: center;
 }
+
 .Bgimage {
 
   background-size: auto 100%;
@@ -71,12 +92,13 @@ input, button, textarea,select {
   padding-left: 0;
   padding-right: 0;
   margin-top: 80px;
-  align-items: center; 
+  align-items: center;
 }
 
 .carousel-indicators [data-bs-target] {
   background-color: #000 !important;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #000 !important;
@@ -86,29 +108,28 @@ input, button, textarea,select {
   background-repeat: no-repeat;
 }
 
-.main{
+.main {
   font-family: 'Poppins', sans-serif;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 .navbar-nav .nav-link {
   font-family: 'Poppins', sans-serif;
-  font-weight: 500; 
+  font-weight: 500;
+  font-size: 20px;
 }
 
-.container-fluid{
+.container-fluid {
   place-content: center;
   margin-left: 10%;
 }
 
-.btn-nav{
+.btn-nav {
   background-color: #808080;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700; 
 }
 
-.navbar-nav{
+.navbar-nav {
   width: 100%;
   gap: 5%;
   place-content: center;
@@ -122,75 +143,102 @@ input, button, textarea,select {
 }
 
 .carousel-inner img {
-  height: 600px;
-  object-fit: cover;
+  height: 950px;
+  padding-top: 40px;
+  width: 100%;
+  object-fit: contain;
   background-color: #D9D9D9;
 }
 
-.body-title{
+.body-title {
   color: #000;
-  text-align:center;
+  text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
-#about-us{
+#about-us {
   border-radius: 40px;
 }
 
-.text-body{
+.text-body {
   margin: 0%;
   padding-left: 10%;
   padding-right: 10%;
 }
-.card-form{
-  text-align:center;
+
+.card-form {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
-.benef-table{
-  text-align:center;
+.tabla-comparativa {
+  width: 100%;
+  border-collapse: collapse;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700; 
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #000;
 }
 
-.card-title{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700; 
+.tabla-comparativa th,
+.tabla-comparativa td {
+  border: 1px solid #000;
+  padding: 10px;
+
 }
 
-.compare-card{
-  text-align:center;
+
+
+.benef-table {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700; 
+  font-weight: 700;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.compare-card {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 /*  FOOTER   */
 
 .footer {
-position: relative;
-width: 100%;
-color: var(--morado-pastel);
-margin-top: 2rem;
+  position: relative;
+  width: 100%;
+  color: var(--morado-pastel);
+  margin-top: 2rem;
 }
 
-.f-about-us ul, .f-ayuda ul, .f-legal ul {
+.f-about-us ul,
+.f-ayuda ul,
+.f-legal ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
 
-.f-about-us a, .f-ayuda a, .f-legal a {
+.f-about-us a,
+.f-ayuda a,
+.f-legal a {
   text-decoration: none;
   color: var(--morado-pastel);
 }
 
-.f-about-us h3, .f-ayuda h3, .f-legal h3 {
+.f-about-us h3,
+.f-ayuda h3,
+.f-legal h3 {
   margin-bottom: 0.5rem;
 }
 
-.f-about-us h3{
+.f-about-us h3 {
   font-weight: 700;
 }
 
@@ -212,7 +260,7 @@ margin-top: 2rem;
   position: relative;
 }
 
-.centro-ayuda img{
+.centro-ayuda img {
   width: 100%;
   height: auto;
   transform: translate(0, -90px);
@@ -261,24 +309,25 @@ margin-top: 2rem;
   text-align: center;
 }
 
-#preguntas ul{
-  list-style-type:none;
+#preguntas ul {
+  list-style-type: none;
   margin: 0;
   padding-bottom: 2rem;
 }
 
-form label{
+form label {
   color: var(--morado-oscuro);
   font-weight: 600;
   padding: 0.5rem 0;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"],
+input[type="email"] {
   border: 1px solid var(--morado-oscuro);
 }
 
-#mensaje{
-  resize:none;
+#mensaje {
+  resize: none;
   border: 1px solid var(--morado-oscuro);
 }
 
@@ -292,11 +341,12 @@ form #enviar {
   margin: 2.5rem auto;
 }
 
-#contacto{
+#contacto {
   width: 65%;
   margin: 15% auto;
   position: relative;
 }
+
 .contactanos {
   position: absolute;
   background-color: var(--morado-pastel);
@@ -330,38 +380,43 @@ form #enviar {
 section h1 {
   margin: 5rem 0 2rem 0;
 }
+
 section p {
   margin-bottom: 2rem;
   line-height: 2rem;
   color: var(--negro);
 }
+
 section span {
   font-weight: 700;
 }
 
 /*----- MEDIA QUERIES  -----*/
 
-@media screen and (max-width:567px){
-  .card:not(:first-child){
-    display:none
+@media screen and (max-width:567px) {
+  .card:not(:first-child) {
+    display: none
   }
+
   .card:first-child {
     width: 80%;
     position: center;
   }
 
-  .f-texto{
+  .f-texto {
     flex-direction: column;
     background-color: var(--morado-principal);
-    padding: 4rem 2rem;   
+    padding: 4rem 2rem;
   }
 
-  .f-about-us h3, .f-ayuda h3, .f-legal h3 {
+  .f-about-us h3,
+  .f-ayuda h3,
+  .f-legal h3 {
     margin-top: 1rem;
     margin-bottom: 0.5em;
   }
 
-  .f-svg{
+  .f-svg {
     display: none;
   }
 
@@ -369,19 +424,20 @@ section span {
   .centro-ayuda h1 {
     font-size: 1.5rem;
     top: 25%;
-    right: 5%;  
+    right: 5%;
   }
 
 }
 
-@media screen and (min-width:576px){
-  .cwrapper{
+@media screen and (min-width:576px) {
+  .cwrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
   }
-  .card{
+
+  .card {
     width: calc(100%/3);
   }
 
@@ -396,7 +452,7 @@ section span {
     padding: 2rem 2.3rem;
   }
 
-  .contactanos h2{
+  .contactanos h2 {
     font-size: 2.5em;
   }
 
