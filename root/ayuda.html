@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 </head>
 <body>
     <header>
@@ -37,43 +39,52 @@
         </div>
         <section id="preguntas" class="container">
             <div class="row justify-content-center">
-                <div class="col-9">
-                    <h1 class="title">Preguntas Frecuentes</h1>
-                    <p class="pregunta">¿Que es Astro y que productos tenemos?</p>
-                    <p class="respuesta">Astro es una fintech que ofrece un ecosistema de soluciones financieras digitales a comercios y usuarios para facilitar el procesamiento de pagos.</p>
+                <div class="col-9" >
+                    <div data-aos="fade-up">
+                        <h1 class="title">Preguntas Frecuentes</h1>
+                        <p class="pregunta">¿Que es Astro y que productos tenemos?</p>
+                        <p class="respuesta">Astro es una fintech que ofrece un ecosistema de soluciones financieras digitales a comercios y usuarios para facilitar el procesamiento de pagos.</p>
+                    </div>
 
-                    <p class="pregunta">¿Mi dinero está seguro con Astro?</p>
-                    <p class="respuesta">Tu dinero está seguro con nosotros. Estamos respaldados por Banco Agrícola en El Salvador y tenemos todos los procesos requeridos por la ley.</p>
+                    <div data-aos="fade-up">
+                        <p class="pregunta">¿Mi dinero está seguro con Astro?</p>
+                        <p class="respuesta">Tu dinero está seguro con nosotros. Estamos respaldados por Banco Agrícola en El Salvador y tenemos todos los procesos requeridos por la ley.</p>
+                    </div>
 
-                    <p class="pregunta">¿Para que me sirven las tarjetas de Astro?</p>
-                    <p class="respuesta">Nuestra misión es ofrecer soluciones financieras digitales que empoderen a individuos y empresas, construyendo un futuro financiero más inclusivo y eficiente para toda la región</p>
-                    <p class="respuesta">Todo con el respaldo de entidades financieras autorizadas, la plataforma astro ofrece una experiencia financiera confiable, eficiente y segura en todas tus transacciones.</p>
+                    <div data-aos="fade-up">
+                        <p class="pregunta">¿Para que me sirven las tarjetas de Astro?</p>
+                        <p class="respuesta">Nuestra misión es ofrecer soluciones financieras digitales que empoderen a individuos y empresas, construyendo un futuro financiero más inclusivo y eficiente para toda la región</p>
+                        <p class="respuesta">Todo con el respaldo de entidades financieras autorizadas, la plataforma astro ofrece una experiencia financiera confiable, eficiente y segura en todas tus transacciones.</p>
+                    </div>
 
-                    <p class="pregunta">¿En que puedo usar las tarjetas de Astro?</p>
-                    <p class="respuesta">Puedes usarla para cualquier compra en comercios físicos o en línea que acepte pagos con Tarjetas VISA, entre otros como:</p>
-                    <ul>
-                        <li>Enviando dinero a otras tarjetas Astro.</li>
-                        <li>Pagos de servicios y recargas de celular.</li>
-                        <li>Contratar seguros.</li>
-                        <li>Ganar Cashback en todas tus compras.</li>
-                        <li>Comprar tickets en Fun Capital.</li>
-                        <li>Pagar en todos los comercios Astro.</li>
-                    </ul>
-                    
-                    <p class="pregunta">¿Puedo cancelar en cualquier momento?</p>
-                    <p class="respuesta">Sí, puedes cancelar tus tarjetas en cualquier momento, sin recargos, penalizaciones o cobros extra.</p>
+                    <div data-aos="fade-up">
+                        <p class="pregunta">¿En que puedo usar las tarjetas de Astro?</p>
+                        <p class="respuesta">Puedes usarla para cualquier compra en comercios físicos o en línea que acepte pagos con Tarjetas VISA, entre otros como:</p>
+                        <ul>
+                            <li>Enviando dinero a otras tarjetas Astro.</li>
+                            <li>Pagos de servicios y recargas de celular.</li>
+                            <li>Contratar seguros.</li>
+                            <li>Ganar Cashback en todas tus compras.</li>
+                            <li>Comprar tickets en Fun Capital.</li>
+                            <li>Pagar en todos los comercios Astro.</li>
+                        </ul>
+                    </div>
 
+                    <div data-aos="fade-up">
+                        <p class="pregunta">¿Puedo cancelar en cualquier momento?</p>
+                        <p class="respuesta">Sí, puedes cancelar tus tarjetas en cualquier momento, sin recargos, penalizaciones o cobros extra.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="quejas">
+        <section id="quejas" data-aos="fade-up">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-9">
                         <h1 class="title">Quejas y Sugerencias</h1>
                         <p class="quejas">Si tienes alguna queja o sugerencia que te gustaria hacernos llegar, no dudes en escribirnos.</p>
                     
-                        <form action="">
+                        <form action="" data-aos="fade-up">
                             <div class="form-group">
                                 <label for="name">Nombre completo: *</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -100,9 +111,9 @@
                 </div>
             </div>
         </section>
-        <section id="contacto">
+        <section id="contacto" data-aos="fade-up">
 
-            <div class="contactanos">
+            <div class="contactanos" data-aos="fade-up-right">
                 <h2>¿Consultas?</h2>
                 <a href="#quejas">CONTACTANOS</a>
             </div>
@@ -144,5 +155,9 @@
             </svg>
         </div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
