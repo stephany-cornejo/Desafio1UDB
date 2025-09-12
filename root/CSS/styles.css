@@ -857,3 +857,44 @@ body .hero .hero-bg {
     background-position: top left !important;
   }
 }
+
+/* Fix para pantallas muy anchas (4K): extender ligeramente la capa de fondo del hero para evitar seams */
+@media (min-width: 2560px) {
+  .hero {
+    max-width: none !important;
+    width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .hero .hero-bg {
+    position: absolute !important;
+    top: 0;
+    left: -4px !important;                         /* pequeña sobreextensión para cubrir redondeo/scrollbar */
+    right: -4px !important;
+    width: calc(100% + 8px) !important;
+    height: 100% !important;
+    background-repeat: repeat-x !important;
+    background-size: auto 100% !important;        /* altura = 100% del hero, repetir en X */
+    background-position: top left !important;
+    background-attachment: scroll !important;
+    z-index: 0 !important;
+    pointer-events: none;
+  }
+
+  /* por seguridad, igualar el fondo del html/body al color predominante del patrón */
+  html, body {
+    background-color: #000 !important;
+  }
+}
+
+/* ajuste extra para resoluciones aún mayores (por ejemplo 4K+ con redondeos mayores) */
+@media (min-width: 3840px) {
+  .hero .hero-bg {
+    left: -8px !important;
+    right: -8px !important;
+    width: calc(100% + 16px) !important;
+  }
+}
