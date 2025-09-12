@@ -11,7 +11,28 @@
 <body>
     <header>
         <nav>
-
+<!-- esto es la barra de navegacion-->
+  <nav class="navbar sticky-top navbar-expand-lg" style="position: fixed; background-color: #ffffff;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">
+        <img src="images/logo-removebg.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html#about-us">Sobre nosotros</a>
+          <a class="nav-link" href="index.html#tarjetas">Tarjetas</a>
+          <a class="nav-link" href="index.html#beneficios">Beneficios</a>
+          <a class="nav-link" href="ayuda.html">Ayuda</a>
+          <a class="nav-link" href="legal.html">Legal</a>
+          <a class="btn btn-nav nav-link" href="#solicitar-tarjeta">Solicitar tarjeta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
         </nav>
     </header>
     <main>
@@ -128,5 +149,24 @@
             </svg>
         </div>
   </footer>
+  <!--esto es el link del script de bootstrap.-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        // Bajando
+        navbar.style.top = "-80px"; // Ajusta según la altura de tu navbar
+      } else {
+        // Subiendo
+        navbar.style.top = "0";
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
 </body>
 </html>
