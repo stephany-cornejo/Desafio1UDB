@@ -5,6 +5,190 @@
   --morado-pastel: #F7EDFA;
   --morado-oscuro: #512871;
   --negro: #0A0908;
+  --navbar-height: 80px;
+}
+
+/* Hero: capa de fondo + imagen en primer plano */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  max-height: 80vh;             /* hero ocupa viewport completo */
+  margin-top: var(--navbar-height);/* evita que el navbar lo tape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* fondo siempre cubre todo el hero y se estira con la pantalla */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* contenedor de la imagen principal en primer plano */
+.hero-picture {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* mainpic: por defecto responsiva, no estira más allá de max-height */
+.hero-img {
+  width: auto;
+  max-width: 95%;
+  height: auto;
+  max-height: 80vh;    /* principal: ocupa hasta 80% del viewport (20% libre) */
+  object-fit: contain; /* mantiene proporción y no se recorta */
+  display: block;
+  margin: 0 auto;
+}
+
+/* En pantallas pequeñas usar menos altura visible */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 40vh;
+    margin-top: calc(var(--navbar-height) - 8px);
+    padding: 0; /* quitar padding extra del contenedor */
+  }
+
+  .hero-picture {
+    padding: 0;        /* eliminar espacios laterales */
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 100%;       /* ocupar todo el ancho del contenedor */
+    max-width: 100%;
+    height: auto;
+    max-height: 40vh;  /* mantener altura máxima si quieres */
+    object-fit: cover; /* o contain si prefieres mantener toda la imagen visible */
+    margin: 0;
+  }
+}
+
+/* En pantallas muy grandes: background se estira (cover) y mainpic sigue limitada */
+@media (min-width: 1200px) {
+  .hero {
+    min-height: 100vh;
+      max-height: 80vh;
+  }
+  .hero-bg {
+    background-size: cover; /* fondo se estira/recorta para llenar */
+
+  }
+  .hero-img {
+    max-height: 70vh; /* mainpic sigue limitada para no crecer indefinidamente */
+   margin-top: 15vh;
+  }
+}
+
+/* Ajustes para que la imagen ocupe más vertical en pantallas grandes */
+@media (min-width: 992px) {
+  .hero {
+    min-height: 20vh; /* background puede estirarse */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-picture {
+    z-index: 2;
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img {
+    max-height: 90vh;    /* MAINPIC queda como máximo 80% del viewport */
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+
+    margin-top: 15vh;
+  }
+
+  .hero-bg {
+    z-index: 0;
+    background-size: cover; /* fondo se estira / recorta en pantallas grandes */
+  }
+}
+
+/* En pantallas pequeñas: comportamiento previo (normal) */
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: 40vh;
+    margin-top: var(--navbar-height);
+  }
+  .hero-img {
+    max-height: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* o contain según prefieras para móviles */
+  }
+}
+
+/* Ajustes móviles */
+@media (max-width: 767px) {
+  .hero {
+    margin-top: calc(var(--navbar-height) - 8px);
+    min-height: 40vh;
+    padding: 0 12px;
+  }
+  .hero-bg {
+    background-position: top center;
+  }
+  .hero-picture {
+    max-width: 800px;
+  }
+}
+
+/* Quitar espacios laterales dentro del hero */
+.hero,
+.hero .container,
+.hero .container-fluid,
+.hero-picture {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Asegurar que la imagen pequeña ocupe todo el ancho disponible */
+.hero-img {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0;
+  object-fit: cover; /* o 'contain' si no quieres recortes */
+}
+
+/* Si añadiste un margin-left global a .container-fluid, sobreescribimos solo para pantallas pequeñas */
+@media (max-width: 991.98px) {
+  .container-fluid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 *,
@@ -117,6 +301,26 @@ select {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 20px;
+}
+
+/* Tamaño de letra del navbar */
+.navbar .nav-link {
+  font-size: 1rem; /* ejemplo: 1rem = 16px */
+}
+
+.navbar .navbar-brand {
+  font-size: 1.25rem; /* tamaño del texto/logo */
+}
+
+/* Si usas un botón en la navegación */
+.navbar .btn-nav {
+  font-size: 0.95rem;
+}
+
+/* Responsive: aumentar en pantallas grandes */
+@media (min-width: 992px) {
+  .navbar .nav-link { font-size: 1.1rem; }
+  .navbar .navbar-brand { font-size: 1.5rem; }
 }
 
 .container-fluid {
@@ -438,7 +642,7 @@ section span {
   }
 
   .card {
-    width: calc(100%/3);
+    width: calc(100%/2);
   }
 
   /* PAGINA - CENTRO DE AYUDA */
@@ -459,4 +663,156 @@ section span {
   .contactanos a {
     font-size: 150%;
   }
+}
+
+/* Hacer que el área de cards actúe como un container y las cards sean más anchas en pantallas grandes */
+.cards-content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Desktop / large: centrar y limitar ancho del contenedor de tarjetas; las cards se vuelven horizontales y más anchas */
+@media (min-width: 992px) {
+  .cards-content {
+    max-width: 1200px;    /* tamaño del "container" en pantallas grandes */
+    margin: 0 auto;       /* centrar */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cards-content .col {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  /* Forzar que las cards ocupen más ancho (sobrescribe w-50) */
+  .cards-content .card {
+    width: 100% !important;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .cards-content .card-img-top {
+    width: 40%;
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .cards-content .card-body {
+    width: 60%;
+    padding: 0;
+  }
+
+  /* Fuerza grid y alineación superior en pantallas grandes para que las 2 cards queden lado a lado */
+  .cards-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    align-items: start; /* important: hace que ambas cards empiecen al mismo nivel */
+    justify-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Cada .col dentro del grid actúa como grid-item sin padding extra de Bootstrap */
+  .cards-content > .col {
+    padding: 0 !important;
+    margin: 0;
+    align-self: start;
+    display: block;
+    width: 100%;
+  }
+
+  /* Asegurar que la card use todo el ancho disponible dentro de la columna */
+  .cards-content .card,
+  .cards-content .w-50 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+  }
+}
+
+/* Medium screens: dejar cards más estrechas pero no tan verticales */
+@media (min-width: 500px) and (max-width: 991.98px) {
+  .cards-content {
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+  .cards-content .card {
+    width: 90% !important;
+    flex-direction: row;
+    align-items: center;
+  }
+  .cards-content .card-img-top { width: 35%; }
+  .cards-content .card-body { width: 65%; }
+}
+
+/* Small screens: comportamiento apilado (como ahora) */
+@media (max-width: 499px) {
+  .cards-content,
+  .cards-content .col,
+  .cards-content .card {
+    width: 100% !important;
+    display: block;
+  }
+  .cards-content .card {
+    padding: 1rem;
+  }
+  .cards-content .card-img-top {
+    width: 100%;
+    height: auto;
+    margin-bottom: .75rem;
+  }
+  .cards-content .card-body { width: 100%; }
+}
+
+/* Forzar separación superior de 15vh para la imagen principal */
+.hero-picture {
+  margin-top: 15vh !important;
+  padding-top: 0 !important;
+}
+
+/* Evitar márgenes contradictorios en la propia imagen */
+.hero-img {
+  margin-top: 5 !important;
+}
+
+/* límite máximo solo en el breakpoint más grande */
+@media (min-width: 500px) {
+  :root { --site-max-width: 1400px; } /* ajusta este valor a la "cantidad" que quieres */
+
+  /* opción A: aplicar al hero y al área de tarjetas (no cambia estructura HTML) */
+  .hero,
+  .cards-content,
+  .container-fluid {
+    max-width: var(--site-max-width);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* asegurar que la imagen principal (mainpic) no se estire más allá del contenedor */
+  .hero-img {
+    max-width: calc(var(--site-max-width) * 0.8);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Si quieres limitar TODO el layout, envuelve el body/ main en <div class="site-max"> y descomenta:
+  .site-max { max-width: var(--site-max-width); margin: 0 auto; width: 100%; }
+  */
 }
