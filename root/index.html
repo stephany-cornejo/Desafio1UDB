@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Web de banco</title>
+  <title>BANCO ASTRO</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS/styles.css">
@@ -16,7 +16,7 @@
   <nav class="navbar sticky-top navbar-expand-lg" style="position: fixed; background-color: #ffffff;">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo-removebg.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+        <img src="images/logotipo banco.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,9 +29,12 @@
           <a class="nav-link" href="#beneficios">Beneficios</a>
           <a class="nav-link" href="ayuda.html">Ayuda</a>
           <a class="nav-link" href="legal.html">Legal</a>
-          <a class="btn btn-nav nav-link" href="#solicitar-tarjeta">Solicitar tarjeta</a>
+          <a class="btn btn-info nav-link text-white fw-bold" style="color: #343a40 !important; background-color: #00bfff !important; border: none;" href="#solicitar-tarjeta">
+  Solicitar tarjeta
+</a>
         </div>
       </div>
+
     </div>
   </nav>
   <!-- imagen responsiva -->
@@ -61,7 +64,7 @@
           <!-- Columna de texto -->
           <div class="col-md-6 d-flex flex-column justify-content-center text-body">
             <p>
-              En <a style="font-family: 'Poppins', sans-serif; font-weight: 700;">Banco UDB</a> nuestra misión es
+              En <a style="font-family: 'Poppins', sans-serif; font-weight: 700;">Banco Astro</a> nuestra misión es
               ofrecer soluciones financieras confiables, seguras y accesibles que impulsen el crecimiento de nuestros
               clientes y comunidades. Desde nuestra fundación, hemos trabajado con el compromiso de brindar un servicio
               cercano y transparente, poniendo siempre a las personas en el centro de nuestras decisiones.
@@ -187,7 +190,9 @@
             <label for="message" class="form-label">Mensaje</label>
             <textarea class="form-control" id="message" rows="3"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn fw-bold" style="color: #343a40; background-color: #00bfff; border: none;">
+  Enviar
+</button>
         </form>
       </div>
     </div>
@@ -197,13 +202,41 @@
         <div class="col-md-6 p-4">
           <h1>Disfruta de los beneficios desde el primer día</h1>
         </div>
-        <div class="col-md-6" style="background-color: #909090;  height: 163px;">
-          <img src="images/payment.jpeg" class="bounce" alt="Imagen de contacto"
-            style="width: 310px; height: 163px; object-fit: cover;">
+        <div class="col-md-6 d-flex align-items-center justify-content-center" style="border-radius: 8px;">
+          <img src="images/payment.jpeg" class="bounce img-fluid" alt="Imagen de contacto"
+    style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
         </div>
-
       </div>
     </div>
+
+    <!-- Sección de mapa de ubicación de oficinas centrales -->
+    <div class="container mt-5 mb-5">
+      <h1 class="text-center mb-4">Ubicación de nuestras oficinas centrales</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(167,33,245,0.10);">
+            <iframe
+              src="https://www.google.com/maps?q=13.704567,-89.170833&z=17&output=embed"
+              width="100%"
+              height="400"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de oficinas centrales">
+            </iframe>
+          </div>
+          <p class="text-center mt-3">
+            Oficinas centrales: Calle ficticia #123, Soyapango, San Salvador, El Salvador.
+            <br>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=13.704567,-89.170833" target="_blank" rel="noopener">
+              Cómo llegar
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- esto es el pie de pagina-->
@@ -211,7 +244,7 @@
   <footer class="footer">
     <div class="f-texto">
       <div class="f-about-us">
-        <h3>astro</h3>
+        <h3>Astro</h3>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="#tarjetas">Tarjetas</a></li>
@@ -239,10 +272,10 @@
       <svg viewBox="0 0 1440 558" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1458 150.779C1189.39 13.3154 626.312 161.164 -63 0V558H1458V150.779Z" fill="#A721F5" />
       </svg>
-
-
-
     </div>
+    <div style="text-align: center; color: #fff; background: #A721F5; padding: 12px 0; font-size: 15px;">
+    © 2025 Banco Astro. Todos los derechos reservados.
+  </div>
   </footer>
 
   <!--esto es el link del script de bootstrap.-->
@@ -264,6 +297,119 @@
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
   </script>
+  <!-- Bot de chat sencillo -->
+<div id="chatbot-container" style="position: fixed; bottom: 24px; right: 24px; z-index: 9999;">
+  <button id="chatbot-toggle" style="background: #A721F5; color: #fff; border: none; border-radius: 50%; width: 56px; height: 56px; font-size: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+    <!-- Icono de robotsito SVG -->
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="16" fill="#fff"/>
+      <rect x="8" y="10" width="16" height="12" rx="6" fill="#A721F5"/>
+      <circle cx="12" cy="16" r="2" fill="#fff"/>
+      <circle cx="20" cy="16" r="2" fill="#fff"/>
+      <rect x="14" y="22" width="4" height="2" rx="1" fill="#A721F5"/>
+      <rect x="15" y="6" width="2" height="4" rx="1" fill="#A721F5"/>
+    </svg>
+  </button>
+  <div id="chatbot-window" style="display: none; width: 320px; height: 400px; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.18); padding: 0; overflow: hidden; flex-direction: column; position: relative;">
+    <!-- Bot Header con robotsito hecho por Henryy botón de cerrar -->
+    <div style="background: #A721F5; color: #fff; padding: 16px; font-weight: bold; display: flex; align-items: center; justify-content: space-between;">
+      <span style="display: flex; align-items: center;">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" style="margin-right: 8px;">
+          <circle cx="16" cy="16" r="16" fill="#fff"/>
+          <rect x="8" y="10" width="16" height="12" rx="6" fill="#A721F5"/>
+          <circle cx="12" cy="16" r="2" fill="#fff"/>
+          <circle cx="20" cy="16" r="2" fill="#fff"/>
+          <rect x="14" y="22" width="4" height="2" rx="1" fill="#A721F5"/>
+          <rect x="15" y="6" width="2" height="4" rx="1" fill="#A721F5"/>
+        </svg>
+        Astro
+      </span>
+      <button id="chatbot-close" style="background: transparent; border: none; color: #fff; font-size: 22px; font-weight: bold; cursor: pointer; line-height: 1;">×</button>
+    </div>
+    <div id="chatbot-messages" style="flex: 1; padding: 12px; overflow-y: auto; font-size: 15px; height: 280px;"></div>
+    <form id="chatbot-form" style="display: flex; border-top: 1px solid #eee;">
+      <input id="chatbot-input" type="text" placeholder="Escribe tu duda..." style="flex: 1; border: none; padding: 12px; outline: none;">
+      <button type="submit" style="background: #A721F5; color: #fff; border: none; padding: 0 16px;">Enviar</button>
+    </form>
+  </div>
+</div>
+<script>
+  const toggleBtn = document.getElementById('chatbot-toggle');
+  const chatWindow = document.getElementById('chatbot-window');
+  const form = document.getElementById('chatbot-form');
+  const input = document.getElementById('chatbot-input');
+  const messages = document.getElementById('chatbot-messages');
+  const closeBtn = document.getElementById('chatbot-close');
+
+  // Mostrar mensaje de bienvenida al abrir el bot
+  function showWelcome() {
+    messages.innerHTML = `<div style="text-align:left; margin-bottom:8px;">
+      <span style="background:#A721F5; color:#fff; padding:6px 12px; border-radius:12px; display:inline-block;">
+        Hola, Bienvenido soy Astro ¿en qué puedo ayudarte?
+      </span>
+    </div>`;
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  toggleBtn.onclick = () => {
+    if (chatWindow.style.display === 'none') {
+      chatWindow.style.display = 'flex';
+      showWelcome();
+    } else {
+      chatWindow.style.display = 'none';
+    }
+  };
+
+  closeBtn.onclick = () => {
+    chatWindow.style.display = 'none';
+  };
+
+  function botReply(userMsg) {
+    userMsg = userMsg.toLowerCase();
+
+    // Saludo
+    if(userMsg === 'hola' || userMsg.includes('buenos días') || userMsg.includes('buenas tardes') || userMsg.includes('buenas noches')) 
+      return 'Hola, ¿cómo puedo ayudarte?';
+
+    // Preguntas frecuentes
+    if(userMsg.includes('qué es astro') || userMsg.includes('que es hace astro')) 
+      return 'Astro es una fintech que ofrece un ecosistema de soluciones financieras digitales a comercios y usuarios para facilitar el procesamiento de pagos.';
+    if(userMsg.includes('dinero seguro') || userMsg.includes('seguro con astro')) 
+      return 'Tu dinero está seguro con nosotros. Estamos respaldados por Banco Agrícola en El Salvador y tenemos todos los procesos requeridos por la ley.';
+    if(userMsg.includes('sirven las tarjetas') || userMsg.includes('para qué sirven las tarjetas') || userMsg.includes('para que sirven las tarjetas')) 
+      return 'Nuestra misión es ofrecer soluciones financieras digitales que empoderen a individuos y empresas, construyendo un futuro financiero más inclusivo y eficiente para toda la región. Todo con el respaldo de entidades financieras autorizadas, la plataforma Astro ofrece una experiencia financiera confiable, eficiente y segura en todas tus transacciones.';
+    if(userMsg.includes('usar las tarjetas') || userMsg.includes('en qué puedo usar') || userMsg.includes('en que puedo usar')) 
+      return 'Puedes usarla para cualquier compra en comercios físicos o en línea que acepte pagos con Tarjetas VISA, enviar dinero a otras tarjetas Astro, pagar servicios, contratar seguros, ganar cashback, comprar tickets en Fun Capital y pagar en todos los comercios Astro.';
+    if(userMsg.includes('cancelar') || userMsg.includes('puedo cancelar')) 
+      return 'Sí, puedes cancelar tus tarjetas en cualquier momento, sin recargos, penalizaciones o cobros extra.';
+
+    // Respuestas generales
+    if(userMsg.includes('tarjeta')) 
+      return 'Puedes solicitar tu tarjeta en la sección "Solicita tu tarjeta".';
+    if(userMsg.includes('beneficio')) 
+      return 'Consulta la tabla de beneficios en la sección correspondiente.';
+    if(userMsg.includes('ayuda')) 
+      return '¿En qué puedo ayudarte? Puedes consultar la sección de ayuda.';
+    if(userMsg.includes('ubicación') || userMsg.includes('oficina')) 
+      return 'Nuestras oficinas centrales están en Soyapango, San Salvador. Consulta el mapa en la página.';
+
+    return 'Lo siento, no entendí tu pregunta. Por favor, intenta con otra consulta o visita la sección de ayuda.';
+  }
+
+  form.onsubmit = function(e) {
+    e.preventDefault();
+    const userMsg = input.value.trim();
+    if(!userMsg) return;
+    messages.innerHTML += `<div style="text-align:right; margin-bottom:4px;"><span style="background:#eee; padding:6px 12px; border-radius:12px; display:inline-block;">${userMsg}</span></div>`;
+    setTimeout(() => {
+      const reply = botReply(userMsg);
+      messages.innerHTML += `<div style="text-align:left; margin-bottom:8px;"><span style="background:#A721F5; color:#fff; padding:6px 12px; border-radius:12px; display:inline-block;">${reply}</span></div>`;
+      messages.scrollTop = messages.scrollHeight;
+    }, 600);
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+  };
+</script>
 </body>
 
 </html>
