@@ -898,3 +898,13 @@ body .hero .hero-bg {
     width: calc(100% + 16px) !important;
   }
 }
+
+/* Animación para las imágenes de las tarjetas */
+.card-img-top {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 8px 24px rgba(167, 33, 245, 0.2);
+}
